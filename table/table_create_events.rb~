@@ -1,0 +1,12 @@
+class CreateEvents < ActiveRecord::Migration
+  def self.up
+    create_table :events do |t|
+    end
+  end
+
+  def self.down
+    drop_table :events
+  end
+end
+Read more at http://www.devarticles.com/c/a/Ruby-on-Rails/Database-Tables-Controllers-for-RubyonRails-Applications/#qRQs3jDD7GxdwyZ4.99
+

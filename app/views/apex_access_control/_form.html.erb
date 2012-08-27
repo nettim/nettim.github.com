@@ -1,0 +1,25 @@
+<%= form_for(@apex_access_control) do |f| %>
+  <% if @apex_access_control.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apex_access_control.errors.count, "error") %> prohibited this apex_access_control from being saved:</h2>
+
+      <ul>
+      <% @apex_access_control.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :admin_username %><br />
+    <%= f.text_field :admin_username %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
